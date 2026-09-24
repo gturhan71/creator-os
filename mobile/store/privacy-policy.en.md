@@ -1,7 +1,7 @@
 # Creator OS — Privacy Policy
 
 **Effective date:** 24 September 2026
-**Developer:** [DEVELOPER / COMPANY NAME] · **Contact:** [CONTACT EMAIL]
+**Developer:** Gökhan TURHAN · **Contact:** gokhanturhan71@gmail.com
 **App:** Creator OS (bundle / package ID: `com.creatoros.app`)
 
 ## Summary
@@ -66,7 +66,7 @@ by these services is needed to provide a feature you request, it is based on
 performing the service you asked for (and, for OpenAI, on you choosing to enter
 your own key).
 
-You may contact us at [CONTACT EMAIL] with any privacy question, and you have the
+You may contact us at gokhanturhan71@gmail.com with any privacy question, and you have the
 right to complain to your local data-protection authority.
 
 ## 6. Children
@@ -87,4 +87,4 @@ will not start sending new kinds of data without the policy describing it.
 
 ## 9. Contact
 
-[DEVELOPER / COMPANY NAME] · [POSTAL ADDRESS, if required] · [CONTACT EMAIL]
+Gökhan TURHAN · gokhanturhan71@gmail.com

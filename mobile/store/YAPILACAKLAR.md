@@ -30,10 +30,9 @@ Uygulama kimliği (iOS bundle / Android paket): `com.creatoros.app` · sürüm `
 
 Dosyalar: `mobile/store/`
 
-- [ ] `privacy-policy.tr.md` ve `privacy-policy.en.md` içindeki boşlukları doldur:
-      `[GELİŞTİRİCİ / ŞİRKET ADI]`, `[İLETİŞİM E-POSTASI]`, `[POSTA ADRESİ]`
-- [ ] Değişiklikten sonra `privacy-policy.html` dosyasını yeniden üret (ya da doğrudan içindeki aynı üç yeri değiştir)
-- [ ] `privacy-policy.html` dosyasını **herkese açık bir adreste** yayınla; bu adresi iki mağazaya da gir
+- [x] Gizlilik politikasındaki geliştirici adı ve iletişim e-postası dolduruldu (Gökhan TURHAN, gokhanturhan71@gmail.com)
+- [x] Politika web sitesinde yayınlanır: `/privacy` ve `/tr/privacy` (site: `website/`, Vercel). Bu adresi iki mağazaya da gir
+- [ ] Mağazalar için posta adresi istenirse politikaya ekle; sonra `python3 website/build.py` çalıştırıp siteyi yeniden yayınla
 - [ ] `store-privacy-answers.md` dosyasına göre **Apple "Uygulama Gizliliği"** ve **Google "Data safety"** formlarını doldur
 - [ ] ⚠ İki maddeye kendin karar ver: (a) Pro'da OpenAI'a giden mesaj içeriğini "toplanan veri" olarak bildirmek,
       (b) RevenueCat'in topladığı veriler → RevenueCat'in kendi gizlilik rehberiyle karşılaştır

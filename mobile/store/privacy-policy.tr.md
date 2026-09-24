@@ -1,7 +1,7 @@
 # Creator OS — Gizlilik Politikası
 
 **Yürürlük tarihi:** 24 Eylül 2026
-**Geliştirici:** [GELİŞTİRİCİ / ŞİRKET ADI] · **İletişim:** [İLETİŞİM E-POSTASI]
+**Geliştirici:** Gökhan TURHAN · **İletişim:** gokhanturhan71@gmail.com
 **Uygulama:** Creator OS (paket / bundle kimliği: `com.creatoros.app`)
 
 ## Özet
@@ -66,7 +66,7 @@ OpenAI, RevenueCat, Google, Apple veya Google Play'de tutulan veriler için o
 gerektiğinde, istediğin hizmetin yerine getirilmesine (OpenAI için ayrıca kendi
 anahtarını girme tercihine) dayanır.
 
-Gizlilikle ilgili her soru için [İLETİŞİM E-POSTASI] adresine yazabilirsin;
+Gizlilikle ilgili her soru için gokhanturhan71@gmail.com adresine yazabilirsin;
 bulunduğun yerdeki veri koruma otoritesine şikâyet hakkın da vardır (Türkiye'de
 KVKK Kurumu).
 
@@ -88,4 +88,4 @@ tanımlamadan yeni türde veri göndermeye başlamaz.
 
 ## 9. İletişim
 
-[GELİŞTİRİCİ / ŞİRKET ADI] · [POSTA ADRESİ, gerekiyorsa] · [İLETİŞİM E-POSTASI]
+Gökhan TURHAN · gokhanturhan71@gmail.com

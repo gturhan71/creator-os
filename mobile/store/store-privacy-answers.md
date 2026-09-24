@@ -42,5 +42,5 @@ Uygulama bugün **gerçek Instagram, e-posta, TikTok veya WhatsApp gelen kutusun
 
 ## Yayından önce doldurulacak boşluklar
 
-- `privacy-policy.*` içinde: `[GELİŞTİRİCİ / ŞİRKET ADI]`, `[İLETİŞİM E-POSTASI]`, `[POSTA ADRESİ]`.
-- Politikayı herkese açık bir adreste yayınlayın (GitHub Pages, kendi alan adınız vb.); mağaza formları URL ister.
+- Politika web sitesinde yayınlanır (`website/`, Vercel): `/privacy` ve `/tr/privacy`; mağaza formlarına bu adresi girin.
+- Mağaza posta adresi isterse politikaya ekleyin.
