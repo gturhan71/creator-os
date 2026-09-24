@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Creator OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- jeep-sqlite: only used on the web platform, as @capacitor-community/sqlite's
+       browser fallback (sql.js + IndexedDB). Inert on a real iOS/Android build. -->
+  <jeep-sqlite autoSave="true"></jeep-sqlite>
+
+  <div id="boot-overlay" class="boot-overlay">
+    <div class="boot-spinner"></div>
+    <div class="boot-text" data-i18n="boot.loading">Preparing on-device database…</div>
+  </div>
+
+  <div id="boot-error" class="boot-error" style="display:none">
+    <div class="boot-error-title" data-i18n="boot.errorTitle">Something went wrong</div>
+    <div class="boot-error-body" id="boot-error-message"></div>
+    <button class="btn btn-primary" id="boot-retry" data-i18n="boot.retry">Try Again</button>
+  </div>
+
+  <div class="app" id="app-root" style="display:none">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">CO</div>
+        <div class="brand-name">Creator OS</div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item" data-view="onboarding">
+          <span class="nav-icon">✦</span> <span data-i18n="nav.onboarding">Başlangıç</span>
+        </button>
+        <button class="nav-item is-active" data-view="inbox">
+          <span class="nav-icon">✉</span> <span data-i18n="nav.inbox">Gelen Kutusu</span>
+          <span class="nav-count" id="inbox-unread-count"></span>
+        </button>
+        <button class="nav-item" data-view="deals">
+          <span class="nav-icon">◆</span> <span data-i18n="nav.deals">Anlaşmalar</span>
+        </button>
+        <button class="nav-item" data-view="bookings">
+          <span class="nav-icon">◷</span> <span data-i18n="nav.bookings">Randevular</span>
+        </button>
+        <button class="nav-item" data-view="assistant">
+          <span class="nav-icon">✧</span> <span data-i18n="nav.assistant">Asistan</span>
+        </button>
+        <button class="nav-item" data-view="links">
+          <span class="nav-icon">↗</span> <span data-i18n="nav.links">Linkler</span>
+        </button>
+        <button class="nav-item" data-view="persona">
+          <span class="nav-icon">◐</span> <span data-i18n="nav.persona">Persona</span>
+        </button>
+        <button class="nav-item" data-view="profile">
+          <span class="nav-icon">◉</span> <span data-i18n="nav.profile">Profil</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="lang-switch" id="lang-switch-desktop"></div>
+        <div class="account">
+          <div class="avatar-ring"><div class="avatar">EK</div></div>
+          <div class="account-meta">
+            <div class="account-name">Elif Kaya</div>
+            <div class="account-handle">@elifkayastudio</div>
+          </div>
+        </div>
+        <div class="mock-badge" data-i18n="sidebar.mockBadge">Cihazda çalışıyor — backend yok</div>
+      </div>
+    </aside>
+
+    <header class="mobile-topbar">
+      <div class="brand-mark">CO</div>
+      <div class="brand-name">Creator OS</div>
+      <div class="lang-switch" id="lang-switch-mobile"></div>
+      <button class="topbar-assistant" id="btn-open-assistant" aria-label="Asistan">✧</button>
+      <div class="avatar-ring mobile-topbar-avatar"><div class="avatar">EK</div></div>
+    </header>
+
+    <main class="content">
+
+      <div class="account-tabs" id="account-tabs"></div>
+
+      <!-- ONBOARDING VIEW -->
+      <section class="view" id="view-onboarding">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="onboarding.headerTitle">Başlangıç</span></h1>
+            <p class="view-sub" data-i18n="onboarding.headerSub">Bireysel Creator Modu — ajans karmaşıklığı olmadan, 15-20 dakikada kurulum.</p>
+          </div>
+        </header>
+
+        <div class="stepper" id="stepper"></div>
+        <div class="onboarding-card" id="onboarding-card"></div>
+      </section>
+
+      <!-- INBOX VIEW -->
+      <section class="view is-active" id="view-inbox">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="inbox.headerTitle">Gelen Kutusu</span> <span id="tip-inbox"></span></h1>
+            <p class="view-sub" data-i18n="inbox.headerSub">Instagram DM, yorum ve e-posta tek panelde — Intent Router her mesajı otomatik etiketler.</p>
+          </div>
+          <div class="filter-chips" id="filter-chips"></div>
+        </header>
+
+        <div class="channel-bar" id="channel-bar"></div>
+
+        <div class="inbox-layout">
+          <div class="thread-list" id="thread-list"></div>
+          <div class="thread-detail" id="thread-detail"></div>
+        </div>
+      </section>
+
+      <!-- DEALS VIEW -->
+      <section class="view" id="view-deals">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="deals.headerTitle">Anlaşmalar</span> <span id="tip-deals"></span></h1>
+            <p class="view-sub" data-i18n="deals.headerSub">Deal Desk — marka tekliflerinin durumu, teklif tespitinden imzaya kadar.</p>
+          </div>
+        </header>
+        <div class="kanban" id="kanban"></div>
+        <div class="deal-manage" id="deal-manage"></div>
+
+        <div class="postdeal-section">
+          <h2 class="postdeal-title"><span data-i18n="deals.postdealHeading">İmza Sonrası: Teslimat, Ödeme, Performans</span> <span id="tip-postdeal"></span></h2>
+          <div class="postdeal-panel" id="postdeal-panel"></div>
+        </div>
+      </section>
+
+      <!-- BOOKINGS VIEW -->
+      <section class="view" id="view-bookings">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="bookings.headerTitle">Randevular</span> <span id="tip-booking"></span></h1>
+            <p class="view-sub" data-i18n="bookings.headerSub">Booking Engine — marka görüşmeleri, çekim planlaması, takvim entegrasyonu.</p>
+          </div>
+        </header>
+        <div class="booking-empty-note" id="booking-empty-note"></div>
+        <div class="booking-list" id="booking-list"></div>
+      </section>
+
+      <!-- ASSISTANT VIEW -->
+      <section class="view" id="view-assistant">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="assistant.headerTitle">Asistan</span></h1>
+            <p class="view-sub" data-i18n="assistant.headerSub">Gelen kutun, randevuların ve anlaşmalarınla ilgili soru sor.</p>
+          </div>
+        </header>
+        <div class="assistant-locked" id="assistant-locked"></div>
+        <div class="assistant-chat" id="assistant-chat">
+          <div class="assistant-messages" id="assistant-messages"></div>
+          <div class="assistant-chips" id="assistant-chips"></div>
+          <form class="assistant-form" id="assistant-form" autocomplete="off">
+            <input class="manage-input" id="assistant-input" enterkeyhint="send" autocomplete="off" />
+            <button class="btn btn-primary" type="submit" id="assistant-send">Gönder</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- LINKS VIEW -->
+      <section class="view" id="view-links">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="links.headerTitle">Linkler</span></h1>
+            <p class="view-sub" data-i18n="links.headerSub">Link paketleri hazırla, cevaplara tek dokunuşla ekle, ne kadar gönderdiğini takip et.</p>
+          </div>
+        </header>
+        <div class="link-stats" id="link-stats"></div>
+        <div class="link-bundles" id="link-bundles"></div>
+        <div class="link-manage" id="link-manage"></div>
+      </section>
+
+      <!-- PERSONA VIEW -->
+      <section class="view" id="view-persona">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="persona.headerTitle">Persona</span> <span id="tip-persona"></span></h1>
+            <p class="view-sub" data-i18n="persona.headerSub">Voice Clone — otomatik yanıtların hangi üslupla yazılacağını belirler.</p>
+          </div>
+        </header>
+        <div class="persona-grid" id="persona-grid"></div>
+        <div class="persona-preview" id="persona-preview"></div>
+      </section>
+
+      <!-- PROFILE VIEW -->
+      <section class="view" id="view-profile">
+        <header class="view-header">
+          <div>
+            <h1><span data-i18n="profile.headerTitle">Profil</span></h1>
+            <p class="view-sub" data-i18n="profile.headerSub">Hesap bilgilerin ve bağlı kanalların — hangisi aktif, hangisi henüz bağlı değil.</p>
+          </div>
+        </header>
+        <div class="profile-layout">
+          <div class="profile-card" id="profile-card"></div>
+          <div class="accounts-list" id="accounts-list"></div>
+        </div>
+        <div class="account-manage" id="account-manage"></div>
+        <div class="pro-section" id="pro-section"></div>
+        <div class="pro-section" id="youtube-section"></div>
+        <div class="notify-settings" id="notify-settings"></div>
+        <div class="profile-actions" id="profile-actions"></div>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="bottom-nav-item is-active" data-view="inbox">
+        <span class="bn-icon">✉</span>
+        <span class="bn-label" data-i18n="bn.inbox">Kutu</span>
+        <span class="bn-count" id="bn-inbox-count"></span>
+      </button>
+      <button class="bottom-nav-item" data-view="deals">
+        <span class="bn-icon">◆</span>
+        <span class="bn-label" data-i18n="bn.deals">Anlaşma</span>
+      </button>
+      <button class="bottom-nav-item" data-view="bookings">
+        <span class="bn-icon">◷</span>
+        <span class="bn-label" data-i18n="bn.bookings">Randevu</span>
+      </button>
+      <button class="bottom-nav-item" data-view="links">
+        <span class="bn-icon">↗</span>
+        <span class="bn-label" data-i18n="bn.links">Link</span>
+      </button>
+      <button class="bottom-nav-item" data-view="persona">
+        <span class="bn-icon">◐</span>
+        <span class="bn-label" data-i18n="bn.persona">Persona</span>
+      </button>
+      <button class="bottom-nav-item" data-view="profile">
+        <span class="bn-icon">◉</span>
+        <span class="bn-label" data-i18n="bn.profile">Profil</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Served locally (not a CDN) so the app stays fully offline-capable, on
+       web and native alike — see esbuild.config.mjs's copy step. -->
+  <script type="module" src="assets/jeep-sqlite/jeep-sqlite.esm.js"></script>
+  <script src="data.js"></script>
+  <script src="app.bundle.js"></script>
+</body>
+</html>
