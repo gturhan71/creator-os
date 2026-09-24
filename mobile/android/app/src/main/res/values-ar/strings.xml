@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="shortcut_pending_short">قيد الانتظار</string>
+    <string name="shortcut_pending_long">الرسائل المعلّقة</string>
+    <string name="shortcut_offers_short">العروض</string>
+    <string name="shortcut_offers_long">عروض العلامات التجارية</string>
+    <string name="shortcut_bookings_short">المواعيد</string>
+    <string name="shortcut_bookings_long">المواعيد القادمة</string>
+    <string name="shortcut_deals_short">الصفقات</string>
+    <string name="shortcut_deals_long">الصفقات المفتوحة</string>
+</resources>

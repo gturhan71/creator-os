@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="shortcut_pending_short">Bekleyen</string>
+    <string name="shortcut_pending_long">Bekleyen mesajlar</string>
+    <string name="shortcut_offers_short">Teklifler</string>
+    <string name="shortcut_offers_long">Marka teklifleri</string>
+    <string name="shortcut_bookings_short">Randevular</string>
+    <string name="shortcut_bookings_long">Yaklaşan randevular</string>
+    <string name="shortcut_deals_short">Anlaşmalar</string>
+    <string name="shortcut_deals_long">Açık anlaşmalar</string>
+</resources>

@@ -1,0 +1,12 @@
+"Pending messages in ${applicationName}" = "${applicationName} bekleyen mesajlar";
+"How many messages are waiting in ${applicationName}" = "${applicationName} kaç mesaj bekliyor";
+"Brand offers in ${applicationName}" = "${applicationName} marka teklifleri";
+"Any new brand offers in ${applicationName}" = "${applicationName} yeni marka teklifi var mı";
+"Upcoming bookings in ${applicationName}" = "${applicationName} yaklaşan randevular";
+"My appointments in ${applicationName}" = "${applicationName} randevularım";
+"Open deals in ${applicationName}" = "${applicationName} açık anlaşmalar";
+"My deals in ${applicationName}" = "${applicationName} anlaşmalarım";
+"Overdue deliverables in ${applicationName}" = "${applicationName} geciken teslimatlar";
+"Late deliverables in ${applicationName}" = "${applicationName} geciken teslimat var mı";
+"Links sent this week in ${applicationName}" = "${applicationName} bu hafta gönderilen linkler";
+"Link stats in ${applicationName}" = "${applicationName} link istatistikleri";

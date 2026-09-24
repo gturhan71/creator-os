@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_background">#FFF6F1</color>
+    <!-- Behind the WebView's padded system-bar areas on WebView < 140; matches the app's dark top bar. -->
+    <color name="window_bg_color">#22132B</color>
+</resources>

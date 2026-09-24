@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="shortcut_pending_short">En attente</string>
+    <string name="shortcut_pending_long">Messages en attente</string>
+    <string name="shortcut_offers_short">Offres</string>
+    <string name="shortcut_offers_long">Offres de marques</string>
+    <string name="shortcut_bookings_short">Rendez-vous</string>
+    <string name="shortcut_bookings_long">Rendez-vous à venir</string>
+    <string name="shortcut_deals_short">Accords</string>
+    <string name="shortcut_deals_long">Accords en cours</string>
+</resources>

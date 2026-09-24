@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher long-press shortcuts (Pro assistant commands). Each one opens the app on the
+     Assistant screen and asks the matching question; the app itself enforces Pro. -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:shortcutId="pending" android:enabled="true" android:icon="@drawable/ic_shortcut_mail"
+        android:shortcutShortLabel="@string/shortcut_pending_short" android:shortcutLongLabel="@string/shortcut_pending_long">
+        <intent android:action="android.intent.action.VIEW" android:data="creatoros://assistant?cmd=pending"
+            android:targetPackage="com.creatoros.app" android:targetClass="com.creatoros.app.MainActivity" />
+    </shortcut>
+    <shortcut android:shortcutId="offers" android:enabled="true" android:icon="@drawable/ic_shortcut_star"
+        android:shortcutShortLabel="@string/shortcut_offers_short" android:shortcutLongLabel="@string/shortcut_offers_long">
+        <intent android:action="android.intent.action.VIEW" android:data="creatoros://assistant?cmd=offers"
+            android:targetPackage="com.creatoros.app" android:targetClass="com.creatoros.app.MainActivity" />
+    </shortcut>
+    <shortcut android:shortcutId="bookings" android:enabled="true" android:icon="@drawable/ic_shortcut_event"
+        android:shortcutShortLabel="@string/shortcut_bookings_short" android:shortcutLongLabel="@string/shortcut_bookings_long">
+        <intent android:action="android.intent.action.VIEW" android:data="creatoros://assistant?cmd=bookings"
+            android:targetPackage="com.creatoros.app" android:targetClass="com.creatoros.app.MainActivity" />
+    </shortcut>
+    <shortcut android:shortcutId="deals" android:enabled="true" android:icon="@drawable/ic_shortcut_work"
+        android:shortcutShortLabel="@string/shortcut_deals_short" android:shortcutLongLabel="@string/shortcut_deals_long">
+        <intent android:action="android.intent.action.VIEW" android:data="creatoros://assistant?cmd=deals"
+            android:targetPackage="com.creatoros.app" android:targetClass="com.creatoros.app.MainActivity" />
+    </shortcut>
+</shortcuts>
