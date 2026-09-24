@@ -60,7 +60,7 @@ C = {
         "priv_p": "Creator OS has no server of ours. Everything lives in a database inside the app.",
         "priv": [
             "No account to create, no sign-up.",
-            "No ads, no analytics, no tracking.",
+            "No ads, no analytics and no tracking inside the app.",
             "Data leaves your phone only for OpenAI (if you add your own key and ask for an AI draft) and RevenueCat (to manage the Pro subscription).",
             "Uninstall the app and your data is gone.",
         ],
@@ -87,7 +87,7 @@ C = {
         "cta_p": "Write to us — a person reads every message.",
         "cta_b": "Contact",
         "f_privacy": "Privacy policy", "f_support": "Support",
-        "priv_page": "Privacy policy", "priv_desc": "How Creator OS handles your data: everything stays on your device except two optional services.",
+        "priv_page": "Privacy policy", "priv_desc": "How the Creator OS app and this website handle data: in the app everything stays on your device except two optional services.",
         "sup_page": "Support", "sup_desc": "Help and contact for Creator OS.",
         "support": {
             "h": "Support",
@@ -138,7 +138,7 @@ C = {
         "priv_p": "Creator OS'un bize ait bir sunucusu yok. Her şey uygulamanın içindeki bir veritabanında durur.",
         "priv": [
             "Hesap açmak, kayıt olmak yok.",
-            "Reklam, analitik, izleme yok.",
+            "Uygulamanın içinde reklam, analitik ve izleme yok.",
             "Veriler telefonundan yalnızca OpenAI'a (kendi anahtarını girip YZ taslağı istersen) ve RevenueCat'e (Pro aboneliğini yönetmek için) gider.",
             "Uygulamayı silince verilerin de gider.",
         ],
@@ -165,7 +165,7 @@ C = {
         "cta_p": "Bize yaz — her mesajı bir insan okur.",
         "cta_b": "İletişim",
         "f_privacy": "Gizlilik politikası", "f_support": "Destek",
-        "priv_page": "Gizlilik politikası", "priv_desc": "Creator OS verilerini nasıl işler: iki isteğe bağlı servis dışında her şey cihazında kalır.",
+        "priv_page": "Gizlilik politikası", "priv_desc": "Creator OS uygulaması ve bu web sitesi verileri nasıl işler: uygulamada iki isteğe bağlı servis dışında her şey cihazında kalır.",
         "sup_page": "Destek", "sup_desc": "Creator OS için yardım ve iletişim.",
         "support": {
             "h": "Destek",
@@ -300,6 +300,7 @@ def page(c, path_en, path_tr, title, desc, body, og_type="website", jsonld=None,
   <nav aria-label="Footer"><a href="{priv}">{e(c["f_privacy"])}</a><a href="{sup}">{e(c["f_support"])}</a><a href="mailto:{MAIL}">{MAIL}</a></nav>
   <span class="end">{"Made for creators." if lang == "en" else "İçerik üreticileri için."}</span>
 </div></footer>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 """

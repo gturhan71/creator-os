@@ -8,7 +8,7 @@
 
 Creator OS cihazında çalışır. Uygulama için bir sunucu işletmiyoruz, kullanıcı
 hesabı yok ve verilerini almıyor, saklamıyor ya da satmıyoruz. Uygulamada reklam,
-analitik veya izleme yazılımı bulunmaz.
+analitik veya izleme yazılımı bulunmaz. (Tanıtım web sitesi ayrıdır — bkz. bölüm 9.)
 
 ## 1. Cihazında kalanlar
 
@@ -86,6 +86,13 @@ Bu politikayı değiştirirsek — örneğin dış bir servise bağlanan bir öz
 eklersek — bu sayfayı ve yürürlük tarihini güncelleriz; uygulama, politika
 tanımlamadan yeni türde veri göndermeye başlamaz.
 
-## 9. İletişim
+## 9. Bu web sitesi
+
+Creator OS web sitesi (bu site) uygulamadan ayrıdır. Ziyaretleri toplu olarak saymak için **Vercel Web Analytics**
+kullanır: sayfa görüntülemeleri, yönlendiren sayfa, ülke ve cihaz/tarayıcı türü. **Çerez kullanmaz**, seni siteler
+arasında izleyip profil çıkarmaz ve IP adresini seni tanımlayacak biçimde saklamaz. Site Vercel üzerinde
+barındırılır. Uygulamanın kendisinde analitik yoktur.
+
+## 10. İletişim
 
 Gökhan TURHAN · gokhanturhan71@gmail.com

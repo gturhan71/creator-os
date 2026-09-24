@@ -15,7 +15,7 @@ son karar sizde; işaretli (⚠) maddeleri RevenueCat'in ve OpenAI'ın kendi reh
 | Diğer Kullanıcı İçeriği ⚠ | Hayır | Hayır | Uygulama işlevselliği | Pro + kendi OpenAI anahtarı: mesaj metni OpenAI'a gider. Bu veri bize gelmez; yine de üçüncü tarafa gittiği için muhafazakâr davranıp bildirdik |
 
 - İletişim bilgisi, konum, kişiler, fotoğraf, tanılama, reklam verisi: **toplanmıyor**.
-- Gizlilik politikası URL'si: `store/privacy-policy.html` dosyasını yayınladığınız adres.
+- Gizlilik politikası URL'si: https://creator-os-five-xi.vercel.app/privacy (Türkçe: /tr/privacy).
 - Şifreleme: `ITSAppUsesNonExemptEncryption = false` (yalnızca HTTPS).
 
 ## Google Play — Data safety

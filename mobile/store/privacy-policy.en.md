@@ -8,7 +8,7 @@
 
 Creator OS runs on your device. We do not operate a server for the app, we do not
 have user accounts, and we do not receive, store or sell your data. There are no
-advertisements, no analytics and no tracking SDKs in the app.
+advertisements, no analytics and no tracking SDKs in the app. (The marketing website is separate — see section 9.)
 
 ## 1. What stays on your device
 
@@ -85,6 +85,13 @@ If we change this policy — for example if we add a feature that connects to an
 outside service — we will update this page and the effective date, and the app
 will not start sending new kinds of data without the policy describing it.
 
-## 9. Contact
+## 9. This website
+
+The Creator OS website (this site) is separate from the app. It uses **Vercel Web Analytics** to count visits
+in aggregate: page views, the referring page, country, and device/browser type. It sets **no cookies**, does not
+build a profile of you across sites and does not store your IP address in a way that identifies you. The site is
+hosted by Vercel. The app itself contains no analytics.
+
+## 10. Contact
 
 Gökhan TURHAN · gokhanturhan71@gmail.com

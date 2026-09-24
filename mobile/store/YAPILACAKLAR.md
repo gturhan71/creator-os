@@ -32,6 +32,8 @@ Dosyalar: `mobile/store/`
 
 - [x] Gizlilik politikasındaki geliştirici adı ve iletişim e-postası dolduruldu (Gökhan TURHAN, gokhanturhan71@gmail.com)
 - [x] Politika web sitesinde yayınlanır: `/privacy` ve `/tr/privacy` (site: `website/`, Vercel). Bu adresi iki mağazaya da gir
+- [ ] **Vercel Web Analytics'i aç:** vercel.com → `creator-os` projesi → Analytics → Enable (kod hazır; açmadan veri gelmez)
+- [ ] Siteyi Google Search Console'a ekle ve `/sitemap.xml` adresini gönder
 - [ ] Mağazalar için posta adresi istenirse politikaya ekle; sonra `python3 website/build.py` çalıştırıp siteyi yeniden yayınla
 - [ ] `store-privacy-answers.md` dosyasına göre **Apple "Uygulama Gizliliği"** ve **Google "Data safety"** formlarını doldur
 - [ ] ⚠ İki maddeye kendin karar ver: (a) Pro'da OpenAI'a giden mesaj içeriğini "toplanan veri" olarak bildirmek,
