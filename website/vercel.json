@@ -65,5 +65,18 @@
       "source": "/tr/support",
       "destination": "/tr/support.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "creator-os-five-xi.vercel.app"
+        }
+      ],
+      "destination": "https://creator-os-turhan.vercel.app/:path*",
+      "permanent": true
+    }
   ]
 }

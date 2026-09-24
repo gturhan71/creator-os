@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://creator-os-five-xi.vercel.app/sitemap.xml
+Sitemap: https://creator-os-turhan.vercel.app/sitemap.xml
